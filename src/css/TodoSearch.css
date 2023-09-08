@@ -1,0 +1,23 @@
+input {
+  margin: 1.5rem auto 2rem;
+  display: flex;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+  
+  background-image: url("../svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: 202px center;
+  
+  border: 1px solid #4f46e5;
+  box-shadow: -5px 5px 5px -5px #4f46e5;
+  /* background: rgba(255, 255, 255, 0.1); 
+  background: hsla(0,0%,100%,.5); */
+  background-color: rgba(0.035, 0.043, 0.063, 0.1);
+  color: #cbd5e1;
+}
+
+input::placeholder {
+  color: #cbd5e1;
+}

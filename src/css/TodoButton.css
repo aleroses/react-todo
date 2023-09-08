@@ -1,0 +1,26 @@
+.add {
+  border: none;
+  background-color: #090b10;
+  border-radius: 50%;
+  /* background-image: url('../svg/add-pink.svg'); */
+  width: 3rem;
+  height: 3rem;
+
+  background-image: url("../svg/add-purple.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* box-shadow: -5px 5px 5px -5px #4f46e5; */
+
+  position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	cursor: pointer;
+  
+  transition: transform 0.3s ease;
+}
+
+.add:hover {
+  transform: rotate(90deg);
+}

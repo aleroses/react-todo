@@ -1,0 +1,56 @@
+li {
+  list-style: none;
+  background-color: #cbd5e1;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 0.5rem;
+
+  position: relative;
+}
+
+.check {
+  background-image: url("../svg/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.check--active {
+  background-image: url("../svg/check-completed.svg");
+}
+
+.delete {
+  background-image: url("../svg/delete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.delete:hover {
+  background-image: url("../svg/delete-hover.svg");
+}
+
+p {
+  width: 85%;
+  height: auto;
+  margin: 0 5px 0;
+  color: #090b10;
+}
+
+.p--completed {
+  text-decoration: line-through;
+}

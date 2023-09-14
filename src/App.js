@@ -1,11 +1,11 @@
 import React from "react";
-import { TodoCounter } from "./components/TodoCounter";
-import { TodoSearch } from "./components/TodoSearch";
-import { TodoList } from "./components/TodoList";
-import { TodoItem } from "./components/TodoItem";
-import { TodoButton } from "./components/TodoButton";
+import { TodoCounter } from "./components/TodoCounter/index";
+import { TodoSearch } from "./components/TodoSearch/index";
+import { TodoList } from "./components/TodoList/index";
+import { TodoItem } from "./components/TodoItem/index";
+import { TodoButton } from "./components/TodoButton/index";
 
-const defaultTodos = [
+/* const defaultTodos = [
   { text: "Lorem lorem", completed: true },
   { text: "Don't cry", completed: false },
   { text: "Lorem ipsus", completed: false },
@@ -13,8 +13,32 @@ const defaultTodos = [
   { text: "Loremlorem", completed: true },
 ];
 
+localStorage.setItem("ToDos_v1", JSON.stringify(defaultTodos)); */
+// localStorage.removeItem("ToDos_v1");
+
+function useLocalStorage(itemName, initialValue) {
+  const localStorageItem = localStorage.getItem(itemName);
+
+  let parsedItem;
+  if (!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
+  } else {
+    parsedItem = JSON.parse(localStorageItem);
+  }
+
+  const [item, setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  };
+
+  return [item, saveItem];
+}
+
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage("ToDos_v1", []);
   const [searchValue, setSearchValue] = React.useState("");
 
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
@@ -33,7 +57,7 @@ function App() {
     // newTodos[todoIndex].completed = true;
     // true = false / false = true
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   const deleteTodo = (text) => {
@@ -41,7 +65,7 @@ function App() {
     const todoIndex = newTodos.findIndex((todo) => todo.text == text);
 
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   return (
@@ -55,6 +79,7 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            // Pasar una función a un componente sin ejecutarla inmediatamente
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />

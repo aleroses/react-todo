@@ -6,7 +6,7 @@
   width: 3rem;
   height: 3rem;
 
-  background-image: url("../svg/add-purple.svg");
+  background-image: url("./add.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

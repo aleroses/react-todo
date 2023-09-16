@@ -9,6 +9,7 @@ import { TodosError } from "../components/TodosError";
 import { TodosEmpty } from "../components/TodosEmpty";
 import { Modal } from "../components/Modal";
 import { TodoContext } from "../components/TodoContext";
+import { TodoForm } from "../components/TodoForm";
 
 function AppUI({}) {
   const {
@@ -42,9 +43,13 @@ function AppUI({}) {
         ))}
       </TodoList>
 
-      <TodoButton />
+      <TodoButton setOpenModal={setOpenModal} />
 
-      {openModal && <Modal>Add ToDo 🦄</Modal>}
+      {openModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>
+      )}
     </>
   );
 }

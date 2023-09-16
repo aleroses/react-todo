@@ -14,11 +14,12 @@
   /* box-shadow: -5px 5px 5px -5px #4f46e5; */
 
   position: fixed;
-	bottom: 1rem;
-	right: 1rem;
-	cursor: pointer;
-  
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .add:hover {

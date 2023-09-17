@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/aleroses/react-todo/static/css/main.5c693057.css",
-    "main.js": "/aleroses/react-todo/static/js/main.2fde51b8.js",
-    "static/media/add.svg": "/aleroses/react-todo/static/media/add.ab9d961f8130b6913cc5.svg",
-    "index.html": "/aleroses/react-todo/index.html",
-    "static/media/search.svg": "/aleroses/react-todo/static/media/search.85408984a99cea9159c6.svg",
-    "static/media/delete.svg": "/aleroses/react-todo/static/media/delete.1e87246fa75d87276fd545ce04a6c915.svg",
-    "static/media/check.svg": "/aleroses/react-todo/static/media/check.8955dbb358cdd6eeb31362ab90c65bc0.svg",
-    "main.5c693057.css.map": "/aleroses/react-todo/static/css/main.5c693057.css.map",
-    "main.2fde51b8.js.map": "/aleroses/react-todo/static/js/main.2fde51b8.js.map"
+    "main.css": "./static/css/main.e1af00db.css",
+    "main.js": "./static/js/main.f41c9cf0.js",
+    "static/media/add.svg": "./static/media/add.ab9d961f8130b6913cc5.svg",
+    "static/media/search.svg": "./static/media/search.85408984a99cea9159c6.svg",
+    "index.html": "./index.html",
+    "static/media/delete.svg": "./static/media/delete.1e87246fa75d87276fd545ce04a6c915.svg",
+    "static/media/check.svg": "./static/media/check.8955dbb358cdd6eeb31362ab90c65bc0.svg",
+    "main.e1af00db.css.map": "./static/css/main.e1af00db.css.map",
+    "main.f41c9cf0.js.map": "./static/js/main.f41c9cf0.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c693057.css",
-    "static/js/main.2fde51b8.js"
+    "static/css/main.e1af00db.css",
+    "static/js/main.f41c9cf0.js"
   ]
 }
